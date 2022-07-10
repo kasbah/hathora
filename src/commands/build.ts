@@ -44,8 +44,8 @@ function build(only: "server" | "client" | undefined) {
       entryPoints: [join(serverDir, ".hathora", "store.ts")],
       bundle: true,
       platform: "node",
-      format: "esm",
-      outfile: join(serverDir, "dist", "index.mjs"),
+      format: "cjs",
+      outfile: join(serverDir, "dist", "index.js"),
       banner: {
         // eslint-disable-next-line max-len
         js: "import { createRequire as topLevelCreateRequire } from 'module';\n const require = topLevelCreateRequire(import.meta.url);",
